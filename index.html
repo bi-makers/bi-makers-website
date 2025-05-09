@@ -244,15 +244,22 @@
             border: 2px dashed var(--primary-dark-blue);
         }
 
-        #about .about-content, #about .about-image-container { /* Renamed placeholder to container */
-            flex: 1;
-            min-width: 300px;
+        #about .about-image-container {
+            flex: 1 1 40%; /* Image container takes less space, basis 40% */
+            min-width: 280px; /* Slightly smaller min-width for image container */
+            display: flex; /* Using flex to center image if it's smaller than container */
+            align-items: center;
+            justify-content: center;
         }
-
-        #about .about-image-container img { /* Style for the image */
+        
+        #about .about-image-container img {
             border-radius: var(--border-radius);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border: 3px solid var(--primary-dark-blue); /* Added a subtle border */
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12); /* Slightly enhanced shadow */
+            border: 3px solid var(--primary-dark-blue);
+            max-height: 450px; /* Set a maximum height for the image */
+            width: auto; /* Maintain aspect ratio if height is constrained */
+            max-width: 100%; /* Ensure it doesn't overflow its container */
+            object-fit: cover; /* Or 'contain' if you don't want cropping */
         }
 
         /* Services Section */
