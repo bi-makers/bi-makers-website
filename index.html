@@ -244,10 +244,15 @@
             border: 2px dashed var(--primary-dark-blue);
         }
 
+        #about .about-content, #about .about-image-container { /* Renamed placeholder to container */
+            flex: 1;
+            min-width: 300px;
+        }
+
         #about .about-image-container img { /* Style for the image */
             border-radius: var(--border-radius);
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border: 3px solid var(--primary-dark-blue);
+            border: 3px solid var(--primary-dark-blue); /* Added a subtle border */
         }
 
         /* Services Section */
