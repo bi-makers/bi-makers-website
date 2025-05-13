@@ -246,6 +246,24 @@
         }
 
 
+        #about .about-image-container {
+            flex: 1 1 35%; /* Image container takes less space, basis 35% */
+            min-width: 280px; 
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #about .about-image-container img {
+            border-radius: var(--border-radius);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12); 
+            border: 3px solid var(--primary-dark-blue);
+            max-height: 380px; /* Further reduced max height for the image */
+            width: auto; 
+            max-width: 100%; 
+            object-fit: contain; /* Or 'contain' if you prefer to see the whole image without cropping */
+        }
+
         /* Services Section */
         .services-grid {
             display: grid;
@@ -436,8 +454,8 @@
                     <p>At BI Makers, we are a dedicated team of highly specialized consultants with decades of collective experience in the ever-evolving landscape of data. We empower businesses by providing tailored solutions in data governance, management, architecture, and cutting-edge analytics.</p>
                     <p>Our passion is to help you navigate the complexities of your data journey, ensuring you extract maximum value and achieve your strategic objectives. We pride ourselves on our deep expertise and commitment to delivering excellence.</p>
                 </div>
-                <div class="about-image-placeholder">
-                    Visualizing Data Excellence
+                <div class="about-image-container">
+                    <img src="images/HR_Dashboards.jpg" />
                 </div>
             </div>
         </section>
